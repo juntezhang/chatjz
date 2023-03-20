@@ -3,6 +3,7 @@ This is a quick hack to explore model fine-tuning of GPT-3 using the OpenAI APIs
 
 It consists of:
 - `prepare_data.py` to extract prompt-completion pairs, that can be used to train and build the vector index.
+  - `python prepare_data.py > ./docs/brunnen.jsonl`
 - `app.py`. It creates a GPT vector index on your local machine called index.json which will consist of vector embeddings using text-davinci-003 as the base model. It uses Gradio to create an UI that can be used to ask and get questions.
 
 Previously I have written [a blog post on how question answering](https://github.com/juntezhang/exploring-question-answering) works.
@@ -22,6 +23,8 @@ When I ask for a fountain close to a retirement home, it returns me a correct fo
 
 I noticed that when I asked for a better answer, it refers me to a search engine instead...which may not be a bad idea.
 ![](images/example4.png)
+
+**Note:** the quality of your training set matters! The more data, the better it obviously becomes. When I use the more complete dataset of `./data/wvz.wvz_brunnen.json` I get better answers. You can try it out with `RUN=2 python prepare_data.py`
 
 Still, this is very promising and would be really powerful when my app can add my geo-coordinates to the question, and shows me the public fountains nearby. I mean, stay hydrated! Especially for free...
 
