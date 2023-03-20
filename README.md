@@ -7,9 +7,9 @@ It consists of:
 
 Previously I have written [a blog post on how question answering](https://github.com/juntezhang/exploring-question-answering) works.
 
-Does it work? Yes it does. After creating the GPT vector index, I started to ask some questions.
+Does it work? Well, it depends. After creating the GPT vector index, I started to ask some questions.
 
-I wanted to know if there are any public fountains in Oerlikon, Zurich. Note that Oerlikon is a district within Zurich. And it gives me the correct answer, including the coordinate to the public fountain.
+I wanted to know if there are any public fountains in Oerlikon, Zurich. Note that Oerlikon is a district within Zurich. And it gives me the incorrect answer, and it includes the coordinate to a public fountain on the other side of the city. This is an example of what is called "hallucination".
 ![](images/example1.png)
 
 I also wanted to know if there are any private fountains in Zurich. They may be in courtyards or private property. And yes there are, and it gives me the coordinates to those!
@@ -18,7 +18,12 @@ I also wanted to know if there are any private fountains in Zurich. They may be 
 Finally I get my answer for public fountains in Zurich.
 ![](images/example3.png)
 
-This would be really powerful when my app can add my geo-coordinates to the question, and shows me the public fountains nearby. I mean, stay hydrated! Especially for free...
+When I ask for a fountain close to a retirement home, it returns me a correct fountain.
+
+I noticed that when I asked for a better answer, it refers me to a search engine instead...which may not be a bad idea.
+![](images/example4.png)
+
+Still, this is very promising and would be really powerful when my app can add my geo-coordinates to the question, and shows me the public fountains nearby. I mean, stay hydrated! Especially for free...
 
 ### Acknowledgements
 This work is supported by **Optimizely**. We unlock digital potential. Optimizely creates digital experiences that transform your company to take data-driven decisions, continued experimentation and constant invention. See https://www.optimizely.com/ and we [are hiring](https://www.optimizely.com/careers/)!
