@@ -19,14 +19,15 @@ I also wanted to know if there are any private fountains in Zurich. They may be 
 Finally I get my answer for public fountains in Zurich.
 ![](images/example3.png)
 
-When I ask for a fountain close to a retirement home, it returns me a correct fountain.
+When I ask for a fountain close to a retirement home, it returns me correct fountains, but not a complete answer. In any way, it would not be able to answer this question because the answers are capped at 500 words.
+![](images/example5.png)
 
-I noticed that when I asked for a better answer, it refers me to a search engine instead...which may not be a bad idea.
+And when I asked for a better answer, it refers me to a search engine instead...which may not be a bad idea.
 ![](images/example4.png)
 
 **Note:** the quality of your training set matters! The more data, the better it obviously becomes. When I use the more complete dataset of `./data/wvz.wvz_brunnen.json` I get better answers. You can try it out with `RUN=2 python prepare_data.py`
 
-Still, this is very promising and would be really powerful when my app can add my geo-coordinates to the question, and shows me the public fountains nearby. I mean, stay hydrated! Especially for free...
+Still, this is very promising with conversational UIs and would be really powerful when my app can add my geo-coordinates to the question, and shows me the public fountains nearby. I mean, stay hydrated! Especially for free...
 
 ### Acknowledgements
 This work is supported by **Optimizely**. We unlock digital potential. Optimizely creates digital experiences that transform your company to take data-driven decisions, continued experimentation and constant invention. See https://www.optimizely.com/ and we [are hiring](https://www.optimizely.com/careers/)!
